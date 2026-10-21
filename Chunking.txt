@@ -1,0 +1,17 @@
+
+import nltk
+
+sentence = "The young scientist develops software"
+words = nltk.word_tokenize(sentence)
+tagged = nltk.pos_tag(words)
+
+grammar = r"""
+    NP: {<DT>?<JJ>*<NN|NNS|NNP>+}
+    VP: {<VB.*><NP>?}
+"""
+
+parser = nltk.RegexpParser(grammar)
+tree = parser.parse(tagged)
+
+print(tree)
+tree.pretty_print()

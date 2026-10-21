@@ -1,0 +1,15 @@
+
+text = input("Enter a sentence: ")
+words = text.split()
+
+print("Unigrams:")
+for word in words:
+    print(word)
+
+print("Bigrams:")
+for i in range(len(words) - 1):
+    print(words[i], words[i + 1])
+
+print("Trigrams:")
+for i in range(len(words) - 2):
+    print(words[i], words[i + 1], words[i + 2])

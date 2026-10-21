@@ -1,0 +1,19 @@
+
+import nltk
+
+sentence = "The students read their textbooks"
+words = nltk.word_tokenize(sentence)
+tagged = nltk.pos_tag(words)
+
+grammar = r"""
+    NP: {<DT|PRP\$>?<JJ>*<NN|NNS>+}
+"""
+
+chunker = nltk.RegexpParser(grammar)
+result = chunker.parse(tagged)
+
+print("POS Tags:")
+print(tagged)
+
+print("Chunked Output:")
+print(result)

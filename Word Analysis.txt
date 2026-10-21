@@ -1,0 +1,10 @@
+
+text = input("Enter a sentence: ")
+
+words = text.split()
+unique_words = set(words)
+
+print("Words:", words)
+print("Number of words:", len(words))
+print("Number of characters:", len(text))
+print("Unique words:", unique_words)

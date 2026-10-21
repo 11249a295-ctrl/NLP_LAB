@@ -1,0 +1,8 @@
+
+nouns = ["John", "Mary"]
+verbs = ["eats", "likes"]
+
+for noun in nouns:
+    for verb in verbs:
+        for obj in nouns:
+            print(noun, verb, obj)

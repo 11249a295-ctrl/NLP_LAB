@@ -1,0 +1,16 @@
+
+from collections import Counter
+
+text = "I like NLP I like Python I study NLP"
+words = text.split()
+
+unigram = Counter(words)
+bigram = Counter(zip(words, words[1:]))
+V = len(unigram)
+
+w1 = input("Enter first word: ")
+w2 = input("Enter second word: ")
+
+prob = (bigram[(w1, w2)] + 1) / (unigram[w1] + V)
+
+print("Bigram probability:", prob)

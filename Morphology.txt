@@ -1,0 +1,11 @@
+
+word = input("Enter a word: ")
+
+suffixes = ["ing", "ed", "es", "s"]
+
+for suffix in suffixes:
+    if word.endswith(suffix) and len(word) > len(suffix) + 2:
+        word = word[:-len(suffix)]
+        break
+
+print("Root word:", word)
